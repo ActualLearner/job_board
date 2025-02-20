@@ -40,6 +40,10 @@ Route::get('/contact', function () {
 
 Route::post('/jobs', function () {
     //validation...
+    request()->validate([
+        'title' => ['required', 'min:4'],
+        'salary' => ['required']
+    ]);
     
     Job::create([
         'title' => request('title'),
