@@ -1,9 +1,9 @@
 <x-layout>
     <x-slot:heading>
-        Register
+        Log In
     </x-slot:heading>
 
-    <form method="POST" action="/register">
+    <form method="POST" action="/login">
         @csrf
 
         <div class="space-y-12">
